@@ -1,16 +1,16 @@
 import { initializeApp } from "firebase/app";
-// import { getAnalytics } from "firebase/analytics";
+import { getAnalytics } from "firebase/analytics";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDpkRyZ-uV5DrM5SNgJ8AZnQpbZzITp5UQ",
-  authDomain: "twitter-468f9.firebaseapp.com",
-  projectId: "twitter-468f9",
-  storageBucket: "twitter-468f9.appspot.com",
-  messagingSenderId: "667021979504",
-  appId: "1:667021979504:web:de6c6bb2223b119b40e9b5",
-  measurementId: "G-M27FR1JJRP"
+  apiKey: process.env.REACT_APP_API_KEY,
+  authDomain: process.env.REACT_APP_AUTH_DOMAIN,
+  projectId: process.env.REACT_APP_PROJECT_ID,
+  storageBucket: process.env.REACT_APP_API_KEY,
+  messagingSenderId: process.env.REACT_APP_STORAGE_BUCKET,
+  appId: process.env.REACT_APP_APP_ID,
+  measurementId: process.env.REACT_APP_MEASUR_ID,
 };
 
 
 export const firebaseApp = initializeApp(firebaseConfig);
-// const analytics = getAnalytics(firebaseApp);
+const analytics = getAnalytics(firebaseApp);
